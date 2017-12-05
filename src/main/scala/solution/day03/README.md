@@ -1,4 +1,4 @@
---- Day 3: Spiral Memory ---
+--- advent_of_code.Day 3: Spiral Memory ---
 
 You come across an experimental new kind of memory stored on
 an infinite two-dimensional grid.

@@ -1,8 +1,8 @@
-package day03
+package solution.day03
 
-object Solution03 extends App {
+import adventofcode.{A, B, Day}
 
-  val input = 347991
+object Day03 extends Day(3) {
 
   case class Vector(x: Int, y: Int) {
     def add(other: Vector) = Vector(this.x + other.x, this.y + other.y)
@@ -51,23 +51,6 @@ object Solution03 extends App {
     )
   }
 
-  def solve1(input: Int) = {
-
-    def stepping(stepsLeft: Int, path: SpiralPath): SpiralPath = {
-      if (stepsLeft <= 0) {
-        path
-      } else {
-        val nextPath = path.step()
-        stepping(stepsLeft - 1, nextPath)
-      }
-    }
-    val path = stepping(input - 1, SpiralPath.init)
-    path.position.distance
-  }
-  val solution = solve1(input)
-  println(s"solution for given input = $solution")
-  //solution for given input = 480
-
   def findSumOfNeighbors(position: Vector, valueMap: Map[Vector, Int]): Int = {
     val x = position.x
     val y = position.y
@@ -101,7 +84,33 @@ object Solution03 extends App {
     loop(input - 1, startPath, startMap)
   }
 
-  def solve2(input: Int): (Int, Int) = {
+  /**
+    * ProblemA
+    * @param input
+    * @return
+    */
+  def problemA(input: Int): Int = {
+
+    def stepping(stepsLeft: Int, path: SpiralPath): SpiralPath = {
+      if (stepsLeft <= 0) {
+        path
+      } else {
+        val nextPath = path.step()
+        stepping(stepsLeft - 1, nextPath)
+      }
+    }
+    val path = stepping(input - 1, SpiralPath.init)
+    path.position.distance
+  }
+  val solutionA = problemA(input.toInt).toString
+  finalAnswer(solutionA, A)
+
+  /**
+    * Problem B
+    * @param input
+    * @return
+    */
+  def problemB(input: Int): (Int, Int) = {
     def loop(step: Int, path: SpiralPath, valueMap: Map[Vector,Int]): (Int, Int) = {
       valueMap.get(path.position) match {
         case Some(value) => {
@@ -120,10 +129,7 @@ object Solution03 extends App {
     loop(1, SpiralPath.init, Map(Vector(0,0) -> 1))
   }
 
-  val (solution2Step, solution2Value) = solve2(input)
-  println(s"solution2 for given input = $solution2Value at step=$solution2Step")
-  //solution2 for given input = 349975 at step=63
-
-
+  val (solutionBStep, solutionB) = problemB(input.toInt)
+  finalAnswer(solutionB.toString, B)
 
 }
