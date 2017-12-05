@@ -33,8 +33,8 @@ object Solution02_1 extends App {
       .sum
   }
 
-  val solution1 = solve(input)
-  println(s"solution1 for given input = $solution1")
+  val solution = solve(input)
+  println(s"solution for given input = $solution")
 
   //solution1 for given input = 47136
 
