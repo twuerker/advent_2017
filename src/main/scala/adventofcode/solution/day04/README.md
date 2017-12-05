@@ -1,4 +1,6 @@
---- advent_of_code.Day 4: High-Entropy Passphrases ---
+# Day 4: High-Entropy Passphrases
+
+### Part One
 
 A new system policy has been put in place that requires all 
 accounts to use a passphrase instead of simply a password.
@@ -17,7 +19,7 @@ For example:
 The system's full passphrase list is available as your puzzle
 input. How many passphrases are valid?
 
---- Part Two ---
+### Part Two
 
 For added security, yet another system policy has been put
 in place. Now, a valid passphrase must contain no two words
