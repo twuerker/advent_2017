@@ -42,6 +42,7 @@ object Day04 extends Day(4) {
     * @return
     */
   def problemA(input: String): Int = {
+    val lineSeparator = "\n"
     input.split(lineSeparator).map { passphrase =>
       hasNoDuplicateWords(passphrase) match {
         case true => 1
@@ -59,6 +60,7 @@ object Day04 extends Day(4) {
     * @return
     */
   def problemB(input: String): Int = {
+    val lineSeparator = "\n"
     input.split(lineSeparator).map { passphrase =>
       hasNoAnagrams(passphrase) match {
         case true => 1
