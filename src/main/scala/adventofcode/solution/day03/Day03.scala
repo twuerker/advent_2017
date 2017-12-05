@@ -1,4 +1,4 @@
-package solution.day03
+package adventofcode.solution.day03
 
 import adventofcode.{A, B, Day}
 

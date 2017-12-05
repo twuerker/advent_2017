@@ -1,4 +1,4 @@
-package solution.day05
+package adventofcode.solution.day05
 
 import adventofcode._
 
