@@ -1,6 +1,6 @@
-package adventofcode.solution.day06
+package adventofcode.day06
 
-import adventofcode.solution.day06.Day06.Allocation
+import adventofcode.day06.Day06.Allocation
 import org.scalatest.FunSuite
 
 class Day06Test extends FunSuite {

@@ -1,4 +1,4 @@
-package adventofcode.solution.day01
+package adventofcode.day01
 
 import org.scalatest.FunSuite
 
